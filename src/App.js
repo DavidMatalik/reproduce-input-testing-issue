@@ -10,8 +10,9 @@ function App() {
     initialValues: {
       someInput: '',
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       setCounter(counter + 1)
+      await Promise.resolve('Promise resolved')
     },
   })
 
